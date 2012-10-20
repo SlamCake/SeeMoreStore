@@ -1,0 +1,15 @@
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\obj\Debug\ResolveAssemblyReference.cache
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\SeeMoreApp.WebUI.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\SeeMoreApp.WebUI.pdb
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\EntityFramework.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\Moq.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\Ninject.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\SeeMoreApp.Domain.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\SeeMoreApp.Domain.pdb
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\EntityFramework.xml
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\Moq.pdb
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\Moq.xml
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\Ninject.pdb
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\bin\Ninject.xml
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\obj\Debug\SeeMoreApp.WebUI.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.WebUI\obj\Debug\SeeMoreApp.WebUI.pdb

@@ -1,0 +1,53 @@
+﻿@model SeeMoreApp.WebUI.Models.CartIndexViewModel 
+ 
+@{ 
+    ViewBag.Title = "SeeMoreApp: Your Cart"; 
+} 
+ 
+<h2>Your cart</h2> 
+<table width="90%" align="center"> 
+    <thead><tr> 
+        <th align="center">Quantity</th> 
+        <th align="left">Item</th> 
+        <th align="right">Price</th> 
+        <th align="right">Subtotal</th> 
+    </tr></thead> 
+    <tbody> 
+        @foreach(var line in Model.Cart.Lines) { 
+            <tr> 
+                <td align="center">@line.Quantity</td> 
+                <td align="left">@line.Product.Name</td> 
+                <td align="right">@line.Product.Price.ToString("c")</td> 
+                <td align="right">@((line.Quantity * line.Product.Price).ToString("c"))</td> 
+                
+                <td> 
+                    @using (Html.BeginForm("RemoveFromCart", "Cart")) {         
+                        
+//                        We can use the strongly typed Html.HiddenFor helper method to create a hidden field for the ReturnUrl 
+//model property, but we need to use the string-based Html.Hidden helper to do the same for the Product ID field. If 
+//we had written Html.HiddenFor(x => line.Product.ProductID), the helper would render a hidden field with 
+//the name line.Product.ProductID. The name of the field would not match the names of the parameters for the 
+//CartController.RemoveFromCart action method, which would prevent the default model binders from working, 
+//so the MVC Framework would not be able to call the method
+                        
+                        @Html.Hidden("ProductId", line.Product.ProductID) 
+                        @Html.HiddenFor(x => x.ReturnUrl) 
+                        <input class="actionButtons" type="submit" value="Remove" /> 
+                    } 
+               </td>
+
+
+            </tr> 
+        } 
+    </tbody> 
+    <tfoot><tr> 
+        <td colspan="3" align="right">Total:</td> 
+        <td align="right"> 
+            @Model.Cart.ComputeTotalValue().ToString("c") 
+        </td> 
+    </tr></tfoot> 
+</table> 
+<p align="center" class="actionButtons"> 
+    <a href="@Model.ReturnUrl">Continue shopping</a> 
+     @Html.ActionLink("Checkout now", "Checkout")
+</p>

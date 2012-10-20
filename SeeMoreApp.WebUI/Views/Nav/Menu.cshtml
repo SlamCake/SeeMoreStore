@@ -1,0 +1,28 @@
+﻿@model IEnumerable<string>
+
+@{ Layout = null; }
+
+@*Action and Routes don't have to have a 1:1 relationship.
+
+ActionLink will generate the URL to get to an action using the first matching route by action name.
+
+RouteLink will generate a URL to a specific route determined either by name or route values.
+*@
+
+@Html.ActionLink("Home", "List", "Product")
+
+@foreach (var link in Model) { 
+    
+    @Html.RouteLink(link, new { controller="Product", action="List", category=link, page=1 },  
+    
+//    Notice that we used @class in the anonymous object we passed as the new parameter to the RouteLink 
+//helper method. This is not a Razor tag. We are using a C# feature to avoid a conflict between the HTML keyword 
+//class (used to assign a CSS style to an element) and the C# use of the same word (used to create a class). The @ 
+//character allows us to use reserved keywords without confusing the compiler. If we just called the parameter 
+//class (without the @), the compiler would assume we are defining a new C# type. When we use the @ character, 
+//the compiler knows we want to create a parameter in the anonymous type called class, and we get the result we 
+//need.
+    
+        new { @class = link == ViewBag.SelectedCategory ? "selected" : null })
+
+}

@@ -1,0 +1,23 @@
+﻿@model SeeMoreApp.Domain.Entities.Product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdmnLayout.cshtml";
+}
+
+<h1>Edit @Model.Name</h1>
+
+@*This leads us to the modification. We would usually expect a form to postback to the action that 
+rendered it, and this is what the Html.BeginForm assumes by default when it generates an HTML form. 
+However, this doesn’t work for our Create method, because we want the form to be posted back to the 
+Edit action so that we can save the newly created product data. To fix this, we can use an overloaded 
+version of the Html.BeginForm helper method to specify that the target of the form generated in the Edit 
+view is the Edit action method of the Admin controller*@
+
+@*Now the form will always be posted to the Edit action, regardless of which action rendered it.*@
+
+@using (Html.BeginForm("Edit","Admin")) { 
+    @Html.EditorForModel() 
+    <input type="submit" value="Save" /> 
+    @Html.ActionLink("Cancel and return to List", "Index") 
+}

@@ -1,0 +1,17 @@
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\SeeMoreApp.UnitTests.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\SeeMoreApp.UnitTests.pdb
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\obj\Debug\SeeMoreApp.UnitTests.dll
+c:\users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\obj\Debug\SeeMoreApp.UnitTests.pdb
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\Moq.dll
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\Ninject.dll
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\SeeMoreApp.Domain.dll
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\SeeMoreApp.WebUI.dll
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\EntityFramework.dll
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\SeeMoreApp.Domain.pdb
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\SeeMoreApp.WebUI.pdb
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\Moq.pdb
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\Moq.xml
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\Ninject.pdb
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\Ninject.xml
+C:\Users\kenyon\documents\visual studio 2010\Projects\SeeMoreApp\SeeMoreApp.UnitTests\bin\Debug\EntityFramework.xml

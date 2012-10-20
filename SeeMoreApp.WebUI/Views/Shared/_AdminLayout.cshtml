@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+@*    In most situations, client-side validation is a useful feature, but if, for some reason, you don’t want 
+to validate at the client, you need to use the following statements: 
+ 
+HtmlHelper.ClientValidationEnabled = false; 
+HtmlHelper.UnobtrusiveJavaScriptEnabled = false; *@
+
+@*If you put these statements in a view or in a controller, then client-side validation is disabled only 
+for the current action. You can disable client-side validation for the entire application by using those 
+statements in the Application_Start method of Global.asax or by adding values to the Web.config file*@
+
+    <link href="@Url.Content("~/Content/Admin.css")" rel="stylesheet" type="text/css" />
+     <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"  
+        type="text/javascript"></script> 
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"  
+        type="text/javascript"></script> 
+</head>
+<body> 
+
+@*The benefit of dealing with the message in the template like this is that users will see it displayed on 
+whatever page is rendered after they have saved a change. At the moment, we return them to the list of products, 
+but we could change the workflow to render some other view, and the users will still see the message (as long as 
+the next view also uses the same layout)*@
+
+    <div> 
+        @if (TempData["message"] != null) { 
+            <div class="Message">@TempData["message"]</div> 
+        } 
+        @RenderBody() 
+    </div>
+</body>
+</html>

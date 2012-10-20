@@ -1,0 +1,32 @@
+﻿@model SeeMoreApp.WebUI.Models.ProductsListViewModel
+           
+            @*Notice that we converted the Price property to a string using the ToString("c") method, which renders 
+numerical values as currency, according to the culture settings that are in effect on your server. For example, if the 
+server is set up as en-US, then (1002.3).ToString("c") will return $1,002.30, but if the server is set to fr-FR, 
+then the same method will return 1 002,30 €. You can change the culture setting for your server by adding a 
+section to the Web.config <system.web> node like this: <globalization culture="fr-FR" uiCulture="fr-
+FR" />.*@
+
+@{
+    ViewBag.Title = "Products";
+}
+ 
+@* We’ve taken the markup that was previously in the foreach loop in the List.cshtml view and moved 
+it to the new partial view. We call the partial view using the Html.RenderPartial helper method. The 
+parameters are the name of the view and the view model object.*@
+
+
+@foreach (var p in Model.Products) {  
+    Html.RenderPartial("ProductSummary", p); 
+}
+
+@*The RenderPartial method doesn’t return HTML markup like most other helper methods. Instead, it writes 
+content directly to the response stream, which is why we must call it like a complete line of C#, using a semicolon. 
+This is slightly more efficient than buffering the rendered HTML from the partial view, since it will be written to the 
+response stream anyway. If you prefer a more consistent syntax, you can use the Html.Partial method, which 
+does exactly the same as the RenderPartial method, but returns an HTML fragment and can be used as 
+@Html.Partial("ProductSummary", p).*@
+
+<div class="pager"> 
+   @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new {page = x, category = Model.CurrentCategory})) 
+</div>

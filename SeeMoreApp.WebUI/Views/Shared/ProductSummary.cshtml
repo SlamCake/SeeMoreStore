@@ -1,0 +1,19 @@
+﻿@model SeeMoreApp.Domain.Entities.Product
+
+<div class="item"> 
+    <h3>@Model.Name</h3> 
+    @Model.Description 
+
+ @*   By default, the BeginForm helper method creates a form that uses the HTTP POST method. You can 
+change this so that forms use the GET method, but you should think carefully about doing so. The HTTP 
+specification requires that GET requests must be idempotent, meaning that they must not cause changes, and 
+adding a product to a cart is definitely a change.*@
+
+    @using (Html.BeginForm("AddToCart", "Cart")) {
+        @Html.HiddenFor(x => x.ProductID)
+        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)<input type="submit" value="+ Add to cart" />
+    }
+
+    <h4>@Model.Price.ToString("c")</h4>
+    @*<h5>@Request.Url.PathAndQuery.ToString();</h5>  *@
+</div>
